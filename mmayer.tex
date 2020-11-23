@@ -17,12 +17,19 @@
 \renewcommand{\itemmarker}{{\small\textbullet}}
 \renewcommand{\ratingmarker}{\faCircle}
 \addbibresource{sample.bib}
+\usepackage{hyperref}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!50!red,
+  urlcolor=gray!70!black
+}
 
 \begin{document}
 \name{SHUBHAM DWIVEDI}
-\tagline{Fullstack Developer |  Problem Solver}
+\tagline{Fullstack Developer}
 % Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
-%\photo{3.3cm}{profile.jpg}
+% \photo{3.3cm}{profile.jpg}
 \personalinfo{%
   % Not all of these are required!
   % You can add your own with \printinfo{symbol}{detail}
@@ -32,7 +39,9 @@
   \location{New Delhi - India}
 %  \homepage{marissamayr.tumblr.com/}
 %  \twitter{@marissamayer}
-  \linkedin{https://www.linkedin.com/in/shubhamdwivedi27/}
+  % \linkedin{https://www.linkedin.com/in/shubhamdwivedi27/}
+  \linkedin{shubhamdwivedi27}
+  \github{shubhamdwivedii}
 %   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
 }
 
@@ -52,11 +61,15 @@
 
 \cvevent{Fullstack Developer}{Codalien Technologies Pvt. Ltd.}{Feb 2019 -- Present}{New Delhi, DL, India}
 \begin{itemize}
-\item Worked on both frontend (web and mobile) and backend applications powered by technologies such as react vue node keystone and mongodb graphql.
+\item Developed both frontend (web and mobile) applications as well as backend services powered by latest web technologies and frameworks.
 \smallskip
-\item Reviewed and maintained code structure for junior developers and interns. 
+\item Planned, wrote and debugged the structure and components for the projects, making sure they are reusable.
 \smallskip
-\item Delivered blah blah etc deployment and maintainence.
+\item Directly interacted with various client's teams, providing feedback, clarifying requirements and helping with technical questions.
+\smallskip
+\item Kept the Project Manager and the IT Leads updated on the overall progress of the projects and managed time-sensitive updates, including content changes and database upgrades.
+\smallskip
+\item Kept the code and the features implemented by the team in accordance to the requirements.
 \end{itemize}
 
 \divider
@@ -76,6 +89,16 @@ AWS lambda service.
 
 \cvsection{Projects}
 
+\cvproject{1UPVision VMS - https://www.1upvision.com/} 
+\begin{itemize}
+\item A visitor management system application with a visitor facing app (VMS) and an admin dashboard app (workspace/visitor management).
+\item I contributed to both frontend applications (powered by ReactJS). Ant Design was heavely used for UI elements. 
+\item A major contribution was a dynamic form generator where use can drag drop form elements from a toolbar and arrange them to create custom forms (for visitors).
+\end{itemize}
+\smallskip
+\smallskip 
+
+
 \cvproject{Drata (Electron App) - https://drata.com/}
 \begin{itemize}
 \item A system monitoring app (Windows, Mac and Linux) designed for employee workstations.
@@ -85,24 +108,38 @@ AWS lambda service.
 \smallskip
 \smallskip
 
+\cvsection[page2sidebar]{Projects Continued}
 
 \cvproject{Perspectico AI - https://www.perspectico.com/} 
 \begin{itemize}
-\item Perspectico is a collection of Job management tools such as AI powered assessment tools, Job search, Competency Tests, Webinars and Courses.
-\item I contributed to the frontend web portal powered by ReactJS during a 3 month overhaul sprint. 
+  \item Perspectico is a collection of Job management tools such as AI powered assessment tools, Job search, Competency Tests, Webinars and Courses.
+  \item I contributed to the frontend web portal powered by ReactJS during a 3 month overhaul sprint. 
 \end{itemize}
 \smallskip
 \smallskip 
 
-
-\cvproject{1UPVision VMS - https://www.1upvision.com/} 
+\cvproject{TravX - http://travx.in/} 
 \begin{itemize}
-\item A visitor management system application with a visitor facing app (VMS) and an admin dashboard app (workspace/visitor management).
-\item I contributed to both frontend applications (powered by ReactJS).
-\item A major contribution was a dynamic form generator where use can drag drop form elements from a toolbar and arrange them to create custom forms (for visitors).
+\item An application designed for travel agents where they can create/sell travel vouchers and manage their sales and expenses. 
+\item A worked as lead developer on both frontend mobile application (VueJS Cordova) and the backend services (KeystoneJS GraphQL).
+\item The DB design for this application was a very interesting challenge as it required support for custom travel vouchers which could have a varying number of offers, each offer having multiple subitems with custom info fields.
+\item \href{https://play.google.com/store/apps/details?id=com.travx.app}{Playstore Link}
 \end{itemize}
 \smallskip
 \smallskip 
+
+
+\cvproject{Proximity.io - https://prox.io/} 
+\begin{itemize}
+\item An application where users can book a one on one sessions with mentors and connect with them via video chat.
+\item I worked as a lead developer in first phase of the application (around 6 months) where I contributed to both the frontend web (React), mobile (React-Native) and the backend (Node Express Firestore).
+\item The video chat was based on Twilio SDK, Stripe was used for payment gateway, Auth0 for providing social login. 
+\item Both the Node/Express app and the React web was deployed on Firebase (Express app as a Firebase Function). Firestore was used as DB. 
+\item MobX was used for store management in both web and mobile React apps. Google APIs for providing calendar integration.
+\end{itemize}
+\smallskip
+\smallskip 
+
 
 
 \cvproject{Evermee (Mobile App) - https://evermee.com/}
@@ -111,12 +148,56 @@ AWS lambda service.
 \item Users can scan these jewellery in Evermee mobile app, and add a memory (a photograph with text message).
 \item I worked on both the fulfillment and user application (with NFC scanning functionality) powered by React-Native (for both iOS and Android). 
 \item I also contributed to the backend CMS powered by KeystoneJS (A Node, Mongo based framework that provides a CMS admin panel powered by NextJS).
+\item \href{https://play.google.com/store/apps/details?id=com.evermee}{Playstore link}
 \end{itemize}
 \smallskip
 \smallskip
 
 
-\cvsection[page2sidebar]{More Projects}
+\cvproject{Credbo - https://www.credbo.com/} 
+\begin{itemize}
+\item An expense management application for retailers and small buisnesses.
+\item I contributed to both the mobile application (React-Native) and the backend service (Node MongoDb GraphQl) 
+\end{itemize}
+\smallskip
+\smallskip 
+
+
+\cvproject{ToyFull (On Going) - https://toyfull-app.web.app/} 
+\begin{itemize}
+\item An ecommerce web and mobile application targeting kid's toys and apparels. 
+\item I am currently working on the both the web (React) and mobile (React Cordova) applications, performing tasks such as fixing/refactoring code, improving data flow, adding/finishing features. 
+\item The backend is based on Magento (with additional plugins). 
+\end{itemize}
+\smallskip
+\smallskip 
+
+
+\cvsection[page3sidebar]{Projects Continued}
+
+
+\cvproject{LeapSkills - https://www.leapskills.in/} 
+\begin{itemize}
+\item An educational app where students have access to various study resources, lessons and videos. 
+\item I worked on a later stage of the mobile application and improved and added various features such as support for embedded YouTube videos, audio player, pdf viewer and various other components. 
+\item Application was based on React-Native. 
+\item \href{https://play.google.com/store/apps/details?id=com.leap.skills}{Playstore link}
+\end{itemize}
+\smallskip
+\smallskip 
+
+
+\cvproject{Novartis PSP - https://www.novartis.com/} 
+\begin{itemize}
+\item An application for purchasing novartis drugs (for Singapore users only). 
+\item I contributed to both the mobile application (React-Native), the web admin interface (React), and the backend server (Node, MySQL, REST)
+\item I worked at a later stage of development and performed tasks such as bug fixing, adding new features (such as a free dose claiming flow, push notifications etc.), and code improvements. 
+\item \href{https://play.google.com/store/apps/details?id=com.novartispsp}{Playstore link}
+\end{itemize}
+\smallskip
+\smallskip 
+
+
 
 \cvproject{MarketMole - https://marketmole.biz/}
 \begin{itemize}
@@ -126,122 +207,23 @@ AWS lambda service.
 \smallskip
 \smallskip
 
-\divider
-
 \cvproject{BMW Prive CRM - https://crm.bmwprive.com}
 \begin{itemize}
-\item Member of BMW CRM team, with responsibilities to build the frontend interface for the CRM. 
-\item All API’s were provided and we integrated it in React JS. 
-\item Some parts like Auth/Signin were built in React JS because of some company guidelines for public facing pages, but the full internal CRM application was React JS.
+\item A customer relationship management application for BMW India. 
+\item The CRM was based on KeystoneJS v4 with some APIs exposed for BMW Prive website that was developed in ReactJS. 
+\item I contributed to both the CRM (by customizing Keystone's default interface according to client's needs) and the Prive website.
 \end{itemize}
 \smallskip
 \smallskip
-
-
-\cvproject{Proximity.io - https://prox.io/} 
-\begin{itemize}
-\item Video Chatting application reactweb reactnative firebase twilio
-\item outsourced to Belzabar Software
-\end{itemize}
-\smallskip
-\smallskip 
-
-\cvproject{Credbo - https://www.credbo.com/} 
-\begin{itemize}
-\item Expense managment app for retailers and wholesellers 
-\item frontend react backend node keystone graphql
-\end{itemize}
-\smallskip
-\smallskip 
-
-\cvproject{TravX - http://travx.in/} 
-\begin{itemize}
-\item VueJs app cordova KeystoneJs Graphql backend
-\item Lead developer fullstack
-\item https://play.google.com/store/apps/details?id=com.travx.app
-\end{itemize}
-\smallskip
-\smallskip 
-
-
-\cvproject{LeapSkills - https://www.leapskills.in/} 
-\begin{itemize}
-\item Worked on frontend react native application
-\item Lead developer fullstack
-\end{itemize}
-\smallskip
-\smallskip 
-
-
-\cvproject{Novartis PSP - https://www.novartis.com/} 
-\begin{itemize}
-\item Worked on both frontend react-native app and backend nodejs app
-\item https://play.google.com/store/apps/details?id=com.novartispsp
-\end{itemize}
-\smallskip
-\smallskip 
-
-
-\cvproject{ToyFull (On Going) - https://toyfull-app.web.app/} 
-\begin{itemize}
-\item Worked on frontend react application (backend in magento)
-\end{itemize}
-\smallskip
-\smallskip 
-
-
 
 
 \cvproject{}
 
+\divider
 
-
-
-% \cvevent{Product Engineer}{Google}{23 June 1999 -- 2001}{Palo Alto, CA}
-
-% \begin{itemize}
-% \item Joined the company as employe \#20 and female employee \#1
-% \item Developed targeted advertisement in order to use user's search queries and show them related ads
-% \end{itemize}
-
-%\cvsection{A Day of My Life}
-
-% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
-% \wheelchart{outer radius}{inner radius}{
-% comma-separated list of value/text width/color/detail}
-% Some ad-hoc tweaking to adjust the labels so that they don't overlap
-% \wheelchart{1.5cm}{0.5cm}{%
-%   10/10em/accent!30/Sleeping \& dreaming about work,
-%   25/9em/accent!60/Public resolving issues with Yahoo!\ investors,
-%   5/13em/accent!10/\footnotesize\\[1ex]New York \& San Francisco Ballet Jawbone board member,
-%   20/15em/accent!40/Spending time with family,
-%   5/8em/accent!20/\footnotesize Business development for Yahoo!\ after the Verizon acquisition,
-%   30/9em/accent/Showing Yahoo!\ employees that their work has meaning,
-%   5/8em/accent!20/Baking cupcakes
-% }
 
 \clearpage
 
-% \cvsection[page2sidebar]{Publications}
-
 \nocite{*}
-
-% \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
-
-% \divider
-
-% \printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{Journal Articles}}, type=article]
-
-% \divider
-
-% \printbibliography[heading=pubtype,title={\printinfo{\faGroup}{Conference Proceedings}},type=inproceedings]
-
-% %% If the NEXT page doesn't start with a \cvsection but you'd
-% %% still like to add a sidebar, then use this command on THIS
-% %% page to add it. The optional argument lets you pull up the
-% %% sidebar a bit so that it looks aligned with the top of the
-% %% main column.
-% % \addnextpagesidebar[-1ex]{page3sidebar}
-
 
 \end{document}
